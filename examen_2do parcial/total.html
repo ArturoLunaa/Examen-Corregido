@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="CSS/stylos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+ <!--Navigation bar-->
+ <div class="container-fluid2 bg-success">AGENCIA DE VIAJES</div>
+ <nav class="navbar navbar-expand-md navbar-dark bg-success sticky-top">
+     <div class="container-fluid">
+         <a class="navbar-brand" href="#"></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav mx-auto">
+                 <li class="nav-item">
+                     <a class="nav-link active text-uppercase" aria-current="page" href="index.html">Inicio</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link active text-uppercase" href="formulario.html">Cotización</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link active text-uppercase" href="contacto.html">Contacto</a>
+                 </li>
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle active text-uppercase" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       Artículos
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       <li><a class="dropdown-item" href="articuloUno.html">Artículo 1</a></li>
+                       <li><a class="dropdown-item" href="articuloDos.html">Artículo 2</a></li>
+                     </ul>
+                   </li>
+             </ul>
+         </div>
+     </div>
+ </nav>
+<body>
+    <main>
+      <div align='center'>
+        <h1 class='text-white'>SU VIAJE</h1>
+        <div class="card" style="width: 30rem;">
+          <img height='380' src="ESTADOS/inicio.jpg" alt="imagen de un estado" id="imagenViaje">
+          <div class="card-body">
+
+        <p>
+            <label class="h1" id='estado' for="estado"></label> <br />
+        </p>
+
+        <div id='costo' class="alert alert-success" role="alert">
+
+        </div>
+      </div>
+    </div>
+      </div>
+    </main>
+</body>
+<script>
+    var imagen = localStorage.getItem('ImagenSeleccionada');
+    document.getElementById("imagenViaje").src= 'ESTADOS/' + imagen;
+
+    var estado = localStorage.getItem('estado');
+    document.getElementById('estado').innerHTML = 'Su visita a <br>' + estado;
+
+    var costo = localStorage.getItem('distancia') * 150;
+    document.getElementById('costo').innerHTML = 'El costo es de <br>$' + costo;
+</script>
+</html>

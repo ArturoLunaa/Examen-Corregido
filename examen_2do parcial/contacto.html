@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="CSS/stylos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
+ <!--Navigation bar-->
+ <div class="container-fluid2 bg-success">AGENCIA DE VIAJES</div>
+ <nav class="navbar navbar-expand-md navbar-dark bg-success sticky-top">
+     <div class="container-fluid">
+         <a class="navbar-brand" href="#"></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav mx-auto">
+                 <li class="nav-item">
+                     <a class="nav-link active text-uppercase" aria-current="page" href="index.html">Inicio</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link active text-uppercase" href="formulario.html">Cotización</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link active text-uppercase" href="contacto.html">Contacto</a>
+                 </li>
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle active text-uppercase" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       Artículos
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       <li><a class="dropdown-item" href="articuloUno.html">Artículo 1</a></li>
+                       <li><a class="dropdown-item" href="articuloDos.html">Artículo 2</a></li>
+                     </ul>
+                   </li>
+             </ul>
+         </div>
+     </div>
+ </nav>
+<body>
+    <main>
+      <div align='center'>
+        <h1 class='text-white'>Contactanos</h1>
+        <div class="card" style="width: 30rem;">
+          <img height='380' src="img/contacto.png" alt="Contacto">
+          <div class="card-body">
+
+            <form method="POST" onsubmit="return Mostrar(event)">
+                <p>
+                    <label for="nombre">Nombre</label><br/>
+                    <input type="text" name="nombre" placeholder="Nombre completo">
+                </p>
+                <p>
+                    <label for="mensaje">Mensaje</label><br/>
+                    <textarea name="mensaje"></textarea>
+                </p>
+
+                <input class='btn btn-success' type="submit" value="Enviar biografía">
+
+                  <br><br>
+
+                  <a href='https://facebook.com'><i class="fab fa-facebook-f fa-3x"></i></a>
+
+                  <!-- Twitter -->
+                  <a href='https://twitter.com'><i class="fab fa-twitter fa-3x"></i></a>
+
+                  <!-- Instagram -->
+                  <a href='https://instagram.com'><i class="fab fa-instagram fa-3x"></i></a>
+            </form>
+
+      </div>
+    </div>
+      </div>
+    </main>
+ <!--footer-->
+ <footer>
+  <article class="container">
+      <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 bg-transparent">
+              <span><h4>AGENCIA DE VIAJES &copy;</h4></span>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4  bg-transparent ">
+              <h4>Contacto</h4>
+              *ÍCONOS DE REDES*
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </div>
+          <div class="col-12 col-md-6 col-lg-4  bg-transparent">
+              <h4> Acerca de nosotros </h4>
+              Agencia de Viajes Internacional y Operadora de Turismo
+          </div>
+      </div>
+  </article>
+</footer>
+<script>
+  const Mostrar = (e) => {
+      const form = new FormData(e.target);
+      const nombre = form.get("nombre");
+      const mensaje = form.get("mensaje");
+      alert('Nombre: ' + nombre + '\n' + 'Mensaje: ' + mensaje);
+      return false
+  };
+</script>
+</body>
+</html>

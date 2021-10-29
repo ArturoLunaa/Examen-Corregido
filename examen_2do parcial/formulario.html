@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/stylos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+ <!--Navigation bar-->
+ <div class="container-fluid2 bg-success">AGENCIA DE VIAJES</div>
+ <nav class="navbar navbar-expand-md navbar-dark bg-success sticky-top">
+     <div class="container-fluid">
+         <a class="navbar-brand" href="#"></a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav mx-auto">
+                 <li class="nav-item">
+                     <a class="nav-link active text-uppercase" aria-current="page" href="index.html">Inicio</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link active text-uppercase" href="formulario.html">Cotización</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link active text-uppercase" href="contacto.html">Contacto</a>
+                 </li>
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle active text-uppercase" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       Artículos
+                     </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       <li><a class="dropdown-item" href="articuloUno.html">Artículo 1</a></li>
+                       <li><a class="dropdown-item" href="articuloDos.html">Artículo 2</a></li>
+                     </ul>
+                   </li>
+             </ul>
+         </div>
+     </div>
+ </nav>
+<body onload="localStorage.clear();">
+    <main>
+      <div align='center'>
+        <h1 class='text-dark'>COTIZADOR DE VIAJES</h1>
+        <div class="card" style="width: 30rem;">
+          <img height='380' src="ESTADOS/inicio.jpg" alt="imagen de un estado" id="imagen">
+          <div class="card-body">
+
+        <form action='total.html'>
+        <p>
+              <label for="nombre">NOMBRE CLIENTE</label> <br />
+              <input type="text" name="nombre" placeholder="Nombre(s) Ap. Parter Ap. Materno">
+        </p>
+        <p>
+            <label for="comentarios">CONTACTO DEL CLIENTE</label> <br />
+            <input type="text" name="CONTACT" placeholder="(000)-0000-000">
+        </p>
+
+        <p>
+            <label for="ADULTOS">INGRESE LA CANTIDAD DE ADULTOS</label> <br />
+            <select name="ADULTS">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </p>
+        <p>
+            <label for="NIÑOS">INGRESE LA CANTIDAD DE NIÑOS (0-12 AÑOS)</label> <br />
+            <select name="KIDS">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </p>
+        <p>
+            <label for="DIAS">INGRESE LA CANTIDAD DE DIAS DE ESTANCIA</label> <br />
+            <input type="text" name="ESTANCIA" placeholder="DIAS DE SU ESTANCIA">
+        </p>
+
+        <p>
+            <label for="ESTADO">DESTINO</label> <br />
+            <select name="estados" id="opcion">
+                <option value="124.1">AGUASCALIENTES</option>
+                <option selected value="1732">BAJA CALIFORNIA</option>
+                <option value="1153">BAJA CALIFORNIA SUR</option>
+                <option value="1497.1">CAMPECHE</option>
+                <option value="413">COLIMA</option>
+                <option value="1191.8">CHIAPAS</option>
+                <option value="1070.3">CHIHUAHUA</option>
+                <option value="526.7">DURANGO</option>
+                <option value="382.8">DISTRITO FEDERAL</option>
+                <option value="75.1">GUANAJUATO</option>
+                <option value="727.1">GUERRERO</option>
+                <option value="385.8">HIDALGO</option>
+                <option value="219.9">JALISCO</option>
+                <option value="336.4">ESTADO DE MEXICO</option>
+                <option value="207.6">MICHOACAN</option>
+                <option value="509.6">MORELOS</option>
+                <option value="457.5">NAYARIT</option>
+                <option value="743.7">NUEVO LEON</option>
+                <option value="825.9">OAXACA</option>
+                <option value="498.7">PUEBLA</option>
+                <option value="179">QUERETARO</option>
+                <option value="1992.5">QUINTANA-ROO</option>
+                <option value="179.7">SAN LUIS POTOSI</option>
+                <option value="1060.5">SINALOA</option>
+                <option value="1664">SONORA</option>
+                <option value="1161.4">TABASCO</option>
+                <option value="600.5">TAMAULIPAS</option>
+                <option value="476.5">TLAXCALA</option>
+                <option value="736.9">VERACRUZ</option>
+                <option value="1741.2">YUCATAN</option>
+                <option value="244">ZACATECAS</option>
+            </select>
+        </p>
+        <input type="submit" class="btn btn-success" id="ejecutar" onclick="Cotizar()" value='COTIZAR'>
+      </div>
+      </form>
+    </div>
+    <br>  <br>
+      </div>
+       <!--Articulo 1-->
+       <div id="postsUno">
+
+    </div>
+
+    <!--Artículo 2-->
+    <div id="postsDos">
+
+    </div>
+       <!--footer-->
+       <footer>
+        <article class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 bg-transparent">
+                    <span><h4>AGENCIA DE VIAJES &copy;</h4></span>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4  bg-transparent ">
+                    <h4>Contacto</h4>
+                    *ÍCONOS DE REDES*
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </div>
+                <div class="col-12 col-md-6 col-lg-4  bg-transparent">
+                    <h4> Acerca de nosotros </h4>
+                    Agencia de Viajes Internacional y Operadora de Turismo
+                </div>
+            </div>
+        </article>
+    </footer>
+    </main>
+</body>
+<script src="JS/formulario.js"></script>
+
+</html>
